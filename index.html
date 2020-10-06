@@ -12,52 +12,61 @@
 <body>
 <div class="container">
 	<div class="left">
-		<h3>We garanti you a better version of yourself everyday</h3>
+		<pre><h3>We garanti you 
 		
+ a better version 
+
+of yourself 
+
+everyday</h3></pre>	
 	</div>
 	<div class="right">
 		<div class="tabs">
 			<ul>
 				<li class="register-li">Register</li>
 				<li class="login-li">Login</li>
-			</ul>
-			
+			</ul>	
 		</div>
 		<div class="register">
-			<div class = "input-field">
-				<input type="text" placeholder="Username" class="input">
-			</div>
-			<div class = "input-field">
-				<input type="text" placeholder="Email" class="input">
-			</div>
-			<div class = "input-field">
-				<input type="password" placeholder="Password" class="input">
-			</div>
-			<div class="btn"><a href="#">Login</a></div>
-		</div>
+			<form>
+				<div class = "input-field">
+					<input type="text" placeholder="Username" class="input">
+				</div>
+
+				<div class = "input-field">
+					<input type="email" name="email" placeholder="Email" class="input">
+				</div>
+
+				<div class = "input-field">
+					<input type="password" placeholder="Password" class="input">
+				</div>
+
+				<!-- <a href="#">Login</a> -->
+				<div class="btn"><input type="submit" value="Register"></div>		
+		    </form>
+		 </div> 
 		<div class="login">
-			<div class = "input-field">
-				<input type="text" placeholder="Email" class="input">
-			</div>
-			<div class = "input-field">
-				<input type="password" placeholder="Password" class="input">
-			</div>
-			<div class="btn"><a href="#">Login</a></div>
-			</div>
+			<form>
+				<div class = "input-field">
+					<input type="email" name="email" placeholder="Email" class="input">
+				</div>
+
+				<div class = "input-field">
+					<input type="password" placeholder="Password" class="input">
+				</div>
+
+				<div class="btn"><input type="submit" value="Log in"></div>
+			</form>
+			
 		</div>
 	</div>
 </div>
 
 
 
-
-
-
-
-
-
-
-
+<div class="footer"><br>
+  <p>About us: We believe in change, in a better future , a better humanity. We will help you be the best version of yourself every single day & guide to make the world a greater and more wonderful place.</p>
+</div>
 <script src="main.js" ></script>
 </body>
 </html>
