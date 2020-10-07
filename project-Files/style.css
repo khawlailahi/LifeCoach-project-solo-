@@ -1,4 +1,113 @@
- 
+ #quotes{
+ 	margin:0 auto;
+ 	background-image: url('images/bg1.jpg');
+	width: 600px;
+	height: 300px;
+	animation:  mymove 1s;
+	animation-timing-function: linear;
+	margin-left:500px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 3px solid white;
+ }
+#quote{
+	margin-top: 18px;
+	background:rgb(0,128,128,0.3);
+	text-align: center;
+ 	text-shadow: 6px gray;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 30px;
+
+}
+ #about{
+ 	margin-top: 40px;
+	background: mediumslateblue;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color : white;
+	width: 130px;
+	margin-left: 300px;
+	
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+.wrapper{
+	display: none;
+}
+#viewProfile{
+	display: none;
+	margin: auto;
+	margin-top: 5px;
+	background: teal;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color : white;
+	width: 205px;
+	margin-left: 1300px;
+	border-radius: 10px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ #profile{
+ 	display: flex;
+ 	margin: 0 auto;
+ 	border-radius: 10px;
+ 	width: 900px;
+ 	height: 500px;
+ 	background-image: url("images/leftBG.jpg");
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+ 	margin-top: 70px;
+box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ #profPic{
+ 	width: 350px;
+ 	height: 300px;
+ 	margin-top: 20px;
+
+ }
+ #info{
+
+ 	
+ 	width: 550px;
+ 	
+ 	border-radius: 3px;
+ }
+ #info1, #info2,#name, #prog{
+ 	margin-top: 18px;
+	background:rgb(0,128,128,0.3);
+	text-align: center;
+ 	text-shadow: 6px gray;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 30px;
+ }
+ #info3{
+ 	margin-top: 18px;
+	background:rgb(0,128,128,0.3);
+	text-align: center;
+ 	text-shadow: 6px gray;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ }
+ #prog,#great{
+ 	margin-top: 20px;
+	background : rgb(255,250,250,0.5);
+	text-align: center;
+ 	text-shadow: 6px gray;
+ 	color: mediumblue;
+ 	font-weight: bold;
+ 	font-size: 30px;
+ }
+ #profilePic{
+ 	background-color: teal;
+ 	width: 350px;
+ 	height: 500px;
+ 	border-radius: 3px;
+ }
 #accepted{
 
 	background-image: url('images/bg1.jpg');
@@ -34,7 +143,7 @@
 	font-size: 30px;
 	background:rgb(255,255,255,0.4);
 }
-#home{
+#home, #home2{
 	margin: auto;
 	margin-top: 50px;
 	background: teal;
@@ -46,9 +155,10 @@
 	width: 205px;
 	margin-left: 300px;
 	border-radius: 10px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
  #sign-in{
- 	margin-top: 20px;
+ 	margin-top: 40px;
 	background: mediumslateblue;
 	padding: 10px;
 	text-align: center;
@@ -58,11 +168,12 @@
 	width: 205px;
 	margin-left: 1300px;
 	border-radius: 10px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 
 #sign-out{
 	display: none;
- 	margin-top: 5px;
+ 	margin-top: 30px;
 	background: mediumslateblue;
 	padding: 10px;
 	text-align: center;
@@ -72,6 +183,7 @@
 	width: 205px;
 	margin-left: 1300px;
 	border-radius: 10px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
  .secondPage {
  	display: none;
@@ -102,7 +214,7 @@ box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  	width: 100px;
  	height: 40px;
  	font-size: 20px;
- 	background-color: purple;
+ 	background-color: darkblue;
  
  	margin-left: 170px;
  	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.10);
@@ -136,6 +248,7 @@ box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  	 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.10);
 }
  .welcome{
+ 	/*display: inline;*/
  	text-align: center;
  	background-color: 	mediumpurple;
  	color:white;
@@ -150,6 +263,7 @@ box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  	background-image: url('images/bg1.jpg');
  	background-size: 100%;
  	margin: auto;
+ 	margin-top: -30px;
  }
 
  .choices{

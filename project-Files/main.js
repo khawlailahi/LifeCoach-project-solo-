@@ -45,12 +45,37 @@ $(".container").hide()
 							   {challenge:"Pick up any rubbish you find on the street and put it a garbage-can", pic:"images/trash.jpeg"},{challenge:"Make a donation wether with clothes/money/time ..", pic:"images/donation.jpg"},
 							   {challenge:"Be an good listner ask someone about their problems and actively listen to them", pic:"images/listner.jpg"},{challenge:"Tell a family member that you love him/her and describe why", pic:"images/love.jpg"}
 							   ];
+
+		var quotes=[ "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind."+"\n"+"- Bernard M. Baruch",
+					"Be the change that you wish to see in the world."+"\n"+"- Mahatma Gandhi","Live as if you were to die tomorrow. Learn as if you were to live forever."+"\n"+"- Mahatma Gandhi",
+					"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."+"\n"+"- Ralph Waldo Emerson",
+					"Do all the good you can, for all the people you can, in all the ways you can, as long as you can."+"\n"+"- Hillary Clinton",
+					"Don’t settle for what life gives you; make life better and build something."+"\n"+"- Ashton Kutcher"
+                   ];
+
+
 		var i ;
 		var j;
 		var profileIndex;
 		//array of all the profile users 
 		var profiles=[];
 		activeUserPerso()
+		var count=0
+		
+		function quote(){
+
+			setInterval(function()
+				{ if(count>= quotes.length)
+					count=0; 
+					count++;
+					$("#quote").text(quotes[count]);
+					
+					console.log("done")}, 3000);
+			
+		}
+quote();
+
+
 		function activeUserPerso(){
 			for(var k = 0 ; k < profiles.length ; k++){
 				 if((profiles[k].info).username === activeUser){
@@ -59,8 +84,6 @@ $(".container").hide()
 					 profileIndex = k;
 				}
 			}
-			console.log(i);
-			console.log(j);
 
 		}
 	 
@@ -90,7 +113,7 @@ $(".container").hide()
     	$(".choices").css("display","none");
     	$(".challenge").css("display","block");
     	persoChallenge();
-        socialOrPerso= 2;
+        socialOrPerso= 1;
     	console.log(profiles)
     	i++;
     });
@@ -124,6 +147,7 @@ $("#accept").click(function(){
 	$("#day").text("Have An Amazing Day " + activeUser + " !");
 	$("#accepted").css("display", "block");
 	$(".challenge").css("display","none");
+	console.log(profiles[profileIndex].persoAccepted )
 })
 
 
@@ -131,7 +155,10 @@ $("#home").click(function(){
 $("#accepted").css("display", "none");
 $(".choices").css("display","block");
 })
-
+$("#home2").click(function(){
+$(".wrapper").css("display", "none");
+$(".choices").css("display","block");
+})
   //this function check is there is another user with same email or username
   //returns false is there's not 
  function UniqUser(username, email){
@@ -152,6 +179,8 @@ $(".choices").css("display","block");
     	$(".secondPage").css("display","block");
     	$("#sign-out").css("display","block");
     	$("#sign-in").css("display","none");
+    	$("#viewProfile").css("display","block");
+
  }
 var activeUser;
 //checks the validity if the user's input at registration 
@@ -177,6 +206,7 @@ function ValidReg(){
         
 		}else{
 		factory(username, email , password);
+
 		GoToPage2();
 		activeUser = username;
 		console.log(activeUser);
@@ -202,6 +232,25 @@ function factory(username, email , password){
 	 $("#passwordregister").val("");
 }
 
+ function display(){
+ 	var name= activeUser
+ 	var email=(profiles[profileIndex].info).email;
+ 	var perso = Math.round(((profiles[profileIndex].persoAccepted) / (persoChallenges.length))*100);
+
+ 	var social=Math.round(((profiles[profileIndex].socialAccepted)/(socialChallenges.length))*100);
+	$("#name").text(name);
+	$("#info1").text("Personal Progress: " + perso + "%");
+	$("#info2").text("Social Progress: " + social + "%");
+	$("#info3").text(" Email Address: " + email);
+console.log(  name , email,  perso, social)
+}
+$("#viewProfile").click(function(){
+	console.log("voew")
+	display();
+	$(".choices , #accepted, challenge").css("display","none");
+
+	$(".wrapper").css("display","block");
+})
 //this function checks if the users email and password correspond to an account or not  
 function login(){
 	var exist=false;
