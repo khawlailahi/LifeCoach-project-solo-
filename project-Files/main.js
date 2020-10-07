@@ -24,15 +24,15 @@ $(document).ready(function() {
 		location.replace("http://www.w3schools.com");
 	}
 
-	var persoChallenges = ["Forgive someone who wronged you","To only speak the truth at all cost","Walk for 2 miles", "Dont consume sugar all day", 
-							"Go to the roof and shout at the top of you lungs : i am alive!!", "meditate for 5 minutes and focus only on your breathing", 
-	                        "Read for 5 pages of any book", "Make a conversation with a stranger", "Dance or sing outloud in public", "Go to work on you bite or on foot",
-	                        "Confess your feelings to someone you love", "Have a conversation with yourself outloud in public", "To NOT make excuses no matter what", "Say YES! to everything/ everyone"
-	                      ];
-
-
-   var socialChallenges = ["Plant a tree/plant", "Buy a meal for a homeless person", "Tell a family member that you love him/her and describe why", "Pick up any rubbish you find on the street and put it a garbage-can",
+		var persoChallenges = [{challenge:"Make a conversation with a stranger", pic:"images/conversation.png"},{challenge:"Read for 5 pages of any book", pic:"images/book.jpg"},
+							   {challenge:"Go to work on you bite or on foot", pic:"images/bike.jpg"},{challenge:"Go to the roof and shout at the top of you lungs your first thought", pic:"images/roof.jpg"},
+							   {challenge:"meditate for 5 minutes and focus only on your breathing", pic:"images/meditate.jpg"},{challenge:"Dance or sing outloud in public", pic:"images/dance.gif"},
+							   {challenge:"Forgive someone who wronged you", pic:"images/forgive.jpg"}];
+	
+       var socialChallenges = ["Plant a tree/plant", "Buy a meal for a homeless person", "Tell a family member that you love him/her and describe why", "Pick up any rubbish you find on the street and put it a garbage-can",
    							"Be an good listner" , "ask someone about their problems and actively listen to them", "Make a donation wether with clothes/money/time .."
 
                            ];
+
+
 })

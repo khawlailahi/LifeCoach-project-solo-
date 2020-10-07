@@ -1,3 +1,60 @@
+ .welcome{
+ 	text-align: center;
+ 	background-color: 	mediumpurple;
+ 	color:white;
+ 	font-family: all;
+ 	font-weight: bold;
+ 	width: 900px;
+ 	border-radius: 5px;
+ 	margin: 0 auto;
+ }
+ .page2{
+ 	background-image: url('images/page2bg.png');
+ }
+
+ .choices{
+ 	margin: 0 auto;
+ 	border-radius: 10px;
+ 	width: 900px;
+ 	height: 500px;
+ 	background-color: cornflowerblue;
+ 	margin-top: 70px;
+
+ }
+ .perso{
+ 	border-radius: 6px;
+ 	width: 300px;
+ 	height: 120px;
+ 	background-color: 	lightsteelblue;
+ 	margin-top: 20px;
+ 	margin-left: 30px;
+ }
+
+
+ .social{
+ 	border-radius: 6px;
+ 	width: 300px;
+ 	height: 120px;
+ 	background-color: 	lightsteelblue;
+ 	
+ 	margin-left: 550px;
+ }
+.brain{
+ 	border-radius: 6px;
+ 	width: 300px;
+ 	height: 120px;
+ 	background-color: 	lightsteelblue;
+ 	margin-top: 20px;
+ 	margin-left: 30px;
+ }
+ .health{
+ 	border-radius: 6px;
+ 	width: 300px;
+ 	height: 120px;
+ 	background-color: 	lightsteelblue;
+ 	margin-top: 20px;
+ 	margin-left: 30px;
+ }
 
 *{
 	margin:0;
