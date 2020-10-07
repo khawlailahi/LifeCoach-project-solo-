@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Life Coach</title>
+<title>Life Coach</title>
 	<script
 	  src="https://code.jquery.com/jquery-3.5.1.min.js"
 	  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 	  crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<div class="container">
+<body class="page2">
+	<div class="container" >
 	<div class="left">
 		<pre><h3>We garanti you 
 		
@@ -28,46 +27,67 @@ everyday</h3></pre>
 			</ul>	
 		</div>
 		<div class="register">
-			<form action="page2.html">
+			<!-- <form > -->
+			<!-- action="page2.html" -->
 				<div class = "input-field">
-					<input type="text" placeholder="Username" class="input">
+					<input type="text" id="username" placeholder="Username" class="input">
 				</div>
 
 				<div class = "input-field">
-					<input type="email" name="email" placeholder="Email" class="input">
+					<input type="email" id="emailregister"name="email" placeholder="Email" class="input">
 				</div>
 
 				<div class = "input-field">
-					<input type="password" placeholder="Password" class="input">
+					<input type="password" id="passwordregister" placeholder="Password" class="input">
 				</div>
 
 				<!-- <a href="#">Login</a> -->
-				<div class="btn"><input type="submit" value="Register" id="register"></div>		
-		    </form>
+				<div class="btn"><button onclick = "ValidReg()"value="Register" id="register">register</button></div>		
+		    <!-- </form> -->
 		 </div> 
 		<div class="login">
-			<form action="page2.html">
+			<!-- <form action="page2.html"> -->
 				<div class = "input-field">
-					<input type="email" name="email" placeholder="Email" class="input">
+					<input type="email" id="emaillogin" name="email" placeholder="Email" class="input">
 				</div>
 
 				<div class = "input-field">
-					<input type="password" placeholder="Password" class="input">
+					<input type="password" id="passwordlogin" placeholder="Password" class="input">
 				</div>
 
-				<div class="btn"><input type="submit" value="Log in" id="login" >
+				<div class="btn"><button value="Login" id="register">login</button>
+					<!-- <input type="submit"  value="Log in" id="login" > -->
 				</div>
-			</form>
+			<!-- </form> -->
 			</div>
 		</div>
 	</div>
 </div>
 
 
-
-<div class="footer"><br>
-  <p>About us: We believe in change, in a better future , a better humanity. We will help you be the best version of yourself every single day & guide to make the world a greater and more wonderful place.</p>
+<div  class="welcome">
+	
+	<h1>WELCOME TO YOUR PERSOMAL LIFE COACH </h1>
+	<h3>Let's make life better!</h3>
+	<button id="sign-in">sign-in</button>
 </div>
+<div class="secondPage">
+<div class="choices">
+	<br><br><h3>Are Up For A New Challenge?</h3>
+	<button id="perso">Personal Challenge</button>
+	<button id="social">Social Challenge</button><br>
+	
+</div>
+<div class="challenge">
+	<br><h3>Your Challenge For Today is To :</h3><br>
+	<p id="chal"> challenge</p><br>
+	<button id="accept"> Accept</button>
+	<button id="decline">Decline</button><br>
+
+</div>
+
+</div>
+
 <script src="main.js" ></script>
 </body>
 </html>

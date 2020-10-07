@@ -1,10 +1,27 @@
+ #sign-in{
+ 	margin-top: 20px;
+	background: mediumslateblue;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color : white;
+	width: 205px;
+	margin-left: 695px;
+	border-radius: 10px;
+ }
+
+ .secondPage {
+ 	display: none;
+ }
+
  .challenge{
  	display: none;
  	margin: 0 auto;
  	border-radius: 10px;
  	width: 900px;
  	height:600px;
- 	background-image: url("images/bgchal.jpg");
+ 	background-image: url("images/leftBG.jpg");
  	background-repeat: no-repeat;
  	background-size: 100%;
  	margin-top: 70px;
@@ -201,7 +218,7 @@ body{
 	font-size:12px;
 	background: #ecebeb;
 }
-.container .right .btn input{
+.container .right .btn button{
 	margin-top: 20px;
 	background: teal;
 	padding: 10px;
