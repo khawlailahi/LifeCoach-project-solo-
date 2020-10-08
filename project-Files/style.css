@@ -1,17 +1,34 @@
+ #title{
+ 	text-shadow: 6px gray;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 40px;
+ 	text-decoration: underline;
+ 	text-align: center;
+ }
+#pre2{
+ 	margin-top: 60px;
+ 	background:rgb(138,43,226,0.7);
+ 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 15px 0 rgba(0, 0, 0, 0.9);
+ }
+ 
  #quotes{
+ 	max-width: 800px;
  	margin:0 auto;
- 	background-image: url('images/bg1.jpg');
-	width: 600px;
-	height: 300px;
+ background-image: url("images/quote.png");
+ background-repeat: no-repeat;
+ 	background-size: 100%;
+	width: 800px;
+	height: 400px;
 	animation:  mymove 1s;
 	animation-timing-function: linear;
-	margin-left:500px;
+	margin-left:350px;
 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border: 3px solid white;
  }
 #quote{
-	margin-top: 18px;
-	background:rgb(0,128,128,0.3);
+	margin-top: 18px;/*
+background-image: url("images/quote.jpg");*/
 	text-align: center;
  	text-shadow: 6px gray;
  	color: white;
@@ -19,19 +36,7 @@
  	font-size: 30px;
 
 }
- #about{
- 	margin-top: 40px;
-	background: mediumslateblue;
-	padding: 10px;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	color : white;
-	width: 130px;
-	margin-left: 300px;
-	
-	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
+ 
 .wrapper{
 	display: none;
 }
@@ -361,6 +366,7 @@ body{
 	font-weight: bold;
 	font-size: 25px;
 	margin-top: 60px;
+
 }
 .container .right{
 	background-color: #fff;

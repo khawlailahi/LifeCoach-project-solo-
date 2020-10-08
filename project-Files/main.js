@@ -33,46 +33,78 @@ $(".container").hide()
 		$(".login").hide();
 	});
 
-	$("#sign-in").click(function(){$(".container").show();})
+	//sign in button
+	$("#sign-in").click(function(){$(".container").show(); });
 
-		var persoChallenges = [{challenge:"Make a conversation with a stranger", pic:"images/conversation.png"},{challenge:"Read for 5 pages of any book", pic:"images/book.jpg"},
-							   {challenge:"Go to work on you bite or on foot", pic:"images/bike.jpg"},{challenge:"Go to the roof and shout at the top of you lungs your first thought", pic:"images/roof.jpg"},
-							   {challenge:"meditate for 5 minutes and focus only on your breathing", pic:"images/meditate.jpg"},{challenge:"Dance or sing outloud in public", pic:"images/dance.gif"},
-							   {challenge:"Forgive someone who wronged you", pic:"images/forgive.jpg"}];
-	
-
-       var socialChallenges =[{challenge:"Plant a tree/plant", pic:"images/plant.jpg"},{challenge:"Buy a meal for a homeless person", pic:"images/homeless.jpg"},
-							   {challenge:"Pick up any rubbish you find on the street and put it a garbage-can", pic:"images/trash.jpeg"},{challenge:"Make a donation wether with clothes/money/time ..", pic:"images/donation.jpg"},
-							   {challenge:"Be an good listner ask someone about their problems and actively listen to them", pic:"images/listner.jpg"},{challenge:"Tell a family member that you love him/her and describe why", pic:"images/love.jpg"}
-							   ];
-
-		var quotes=[ "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind."+"\n"+"- Bernard M. Baruch",
-					"Be the change that you wish to see in the world."+"\n"+"- Mahatma Gandhi","Live as if you were to die tomorrow. Learn as if you were to live forever."+"\n"+"- Mahatma Gandhi",
-					"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."+"\n"+"- Ralph Waldo Emerson",
-					"Do all the good you can, for all the people you can, in all the ways you can, as long as you can."+"\n"+"- Hillary Clinton",
-					"Don’t settle for what life gives you; make life better and build something."+"\n"+"- Ashton Kutcher"
-                   ];
+	var persoChallenges = [{challenge:"Make a conversation with a stranger", pic:"images/conversation.png"},{challenge:"Read for 5 pages of any book", pic:"images/book.jpg"},
+						   {challenge:"Go to work on you bite or on foot", pic:"images/bike.jpg"},{challenge:"Go to the roof and shout at the top of you lungs your first thought", pic:"images/roof.jpg"},
+						   {challenge:"meditate for 5 minutes and focus only on your breathing", pic:"images/meditate.jpg"},{challenge:"Dance or sing outloud in public", pic:"images/dance.gif"},
+						   {challenge:"Forgive someone who wronged you", pic:"images/forgive.jpg"}];
 
 
-		var i ;
-		var j;
-		var profileIndex;
-		//array of all the profile users 
-		var profiles=[];
-		activeUserPerso()
-		var count=0
-		
+   var socialChallenges =[{challenge:"Plant a tree/plant", pic:"images/plant.jpg"},{challenge:"Buy a meal for a homeless person", pic:"images/homeless.jpg"},
+						   {challenge:"Pick up any rubbish you find on the street and put it a garbage-can", pic:"images/trash.jpeg"},{challenge:"Make a donation wether with clothes/money/time ..", pic:"images/donation.jpg"},
+						   {challenge:"Be an good listner ask someone about their problems and actively listen to them", pic:"images/listner.jpg"},{challenge:"Tell a family member that you love him/her and describe why", pic:"images/love.jpg"}
+						   ];
+
+	var quotes=[ "Be who you are and say what you feel,"+ "\n" +" because those who mind don't matter,"+ "\n" +"  and those who matter don't mind."+"\n"+ "\n" +"- Bernard M. Baruch",
+				"Be the change"+ "\n" +"  that you wish to see in the world."+"\n"+ "\n"+"- Mahatma Gandhi","Live as if you were to die tomorrow."+ "\n" +" Learn as if you were to live forever."+"\n"+ "\n"+"- Mahatma Gandhi",
+				"To be yourself in a world that is constantly"+ "\n" +"  trying to make you something else "+ "\n" +" is the greatest accomplishment."+"\n"+"\n" +"- Ralph Waldo Emerson",
+				"Do all the good you can,"+ "\n" +"  for all the people you can,"+ "\n" +"  in all the ways you can, as long as you can."+"\n"+ "\n"+"- Hillary Clinton",
+				"Don't settle for what life gives you,"+ "\n" +" make life better and build something."+"\n"+ "\n"+"- Ashton Kutcher"
+               ];
+
+
+var i ;
+var j;
+//index of active user in the profiles array
+var profileIndex;
+//array of all the profile users 
+var profiles=[];
+activeUserPerso()
+var count=0
+
+$("#quote").text(quotes[count])
+
+		 //sign-out button will reload the page because i dont know another way to signout 
+$("#sign-out").click(function(){location.reload();})
+
+//this is the sencond page 
+$(".container").hide()
+
+	// this is for the sign/ login (container div)
+	$(".login").hide();
+	$('.register-li').addClass("active");
+
+	$(".login-li").click(function(){
+		$(this).addClass("active");
+		$(".register-li").removeClass("active");
+		$(".login").show();
+		$(".register").hide();
+	});
+
+	$(".register-li").click(function(){
+		$(this).addClass("active");
+		$(".login-li").removeClass("active");
+		$(".register").show();
+		$(".login").hide();
+	});
+
+
+	// sign in button
+	$("#sign-in").click(function(){$(".container").show(); $("#quotes").hide()});
+
+
 		function quote(){
-
+			// i set this for 3 seconds to show that it works 
 			setInterval(function()
 				{ if(count>= quotes.length)
 					count=0; 
 					count++;
-					$("#quote").text(quotes[count]);
-					
-					console.log("done")}, 3000);
+					$("#quote").text(quotes[count]);}, 3000);
+		}	
 			
-		}
+// activation the generation of quotes		
 quote();
 
 
@@ -180,7 +212,9 @@ $(".choices").css("display","block");
     	$("#sign-out").css("display","block");
     	$("#sign-in").css("display","none");
     	$("#viewProfile").css("display","block");
-
+    	$(".footer").css("display","none");
+    	$("#quotes").css("display","none");
+    	console.log("retxycvhbijnklm;l")
  }
 var activeUser;
 //checks the validity if the user's input at registration 
@@ -206,13 +240,13 @@ function ValidReg(){
         
 		}else{
 		factory(username, email , password);
-
 		GoToPage2();
+		$(".choices").css("display","block");
 		activeUser = username;
 		console.log(activeUser);
         activeUserPerso();
 	 	
-    }
+          }
 
 }
 
@@ -245,7 +279,7 @@ function factory(username, email , password){
 console.log(  name , email,  perso, social)
 }
 $("#viewProfile").click(function(){
-	console.log("voew")
+	
 	display();
 	$(".choices , #accepted, challenge").css("display","none");
 
