@@ -5,7 +5,7 @@
 
 Stack :
 
--HTML 
--Jquery
--JavaScript
+- HTML 
+- Jquery
+- JavaScript
 
